@@ -6,10 +6,10 @@ n = 3
 def merge_sort(num1,m,num2,n):
     while n > 0:
         if m <= 0 or nums2[n-1] >= nums1[m-1]:  
-            nums1[m+n-1] = nums2[n-1]
+            num1[m+n-1] = num2[n-1]
             n -= 1
         else:
-            nums1[m+n-1] = nums1[m-1]
+            num1[m+n-1] = num1[m-1]
             m -= 1
     return num1        
 print(merge_sort(nums1,m,nums2,n)) 
