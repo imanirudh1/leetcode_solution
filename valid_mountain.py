@@ -1,19 +1,14 @@
-s='bbbab'
-def longestPalindromeSubseq(s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        n = len(s)
-        dp = [1] * n
-        for j in range(1, len(s)):
-            pre = dp[j]
-            for i in reversed(range(0, j)):
-                tmp = dp[i]
-                if s[i] == s[j]:
-                    dp[i] = 2 + pre if i + 1 <= j - 1 else 2
-                else:
-                    dp[i] = max(dp[i + 1], dp[i])
-                pre = tmp
-        return dp[0]
-print(longestPalindromeSubseq(s))
+A=[0,3,2,1]
+def valid_mountain(a):
+    N = len(A)
+    i = 0
+    while i+1 < N and A[i] < A[i+1]:
+        i += 1
+    if i == 0 or i == N-1:
+        return False
+    while i+1 < N and A[i] > A[i+1]:
+        i += 1
+
+    return i == N-1             
+
+print(valid_mountain(A))
