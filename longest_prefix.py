@@ -7,5 +7,6 @@ def longest_prefix(strs):
         for other in strs:
             if other[i] != ch:
                 return shortest[:i]
+        print(i,ch)        
     return shortest 
 print(longest_prefix(strs))    
