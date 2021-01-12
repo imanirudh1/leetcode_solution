@@ -1,5 +1,5 @@
-const starting = [1, 0, 3, 8, 5, 8]
-const finish = [2, 6, 4, 9, 7, 9]
+const starting = [75250, 50074, 43659, 8931, 11273, 27545, 50879, 77924]
+const finish = [112960, 114515, 81825, 93424, 54316, 35533, 73383, 160252]
 for (let j = 0; j < starting.length; j++) {
   minIndex = j
   for (let k = j + 1; k < starting.length; k++) {
