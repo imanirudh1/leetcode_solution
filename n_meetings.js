@@ -13,12 +13,20 @@ for (let j = 0; j < starting.length; j++) {
 
 var start = starting[0]
 var end = finish[0]
-const attended = [starting[0]]
-for (let i = 1; i < starting.length; i++) {
-  start = starting[i]
-  if (start > end) {
-    attended.push(starting[i])
-    end = finish[i]
+const attended = []
+for (let i = 0; i < starting.length; i++) {
+  if (attended.length === 0) {
+    attended.push(i + 1)
+    var start = starting[i]
+    var end = finish[i]
+  } else {
+    start = starting[i]
+    if (start > end) {
+      attended.push(i + 1)
+      end = finish[i]
+    }
   }
 }
+console.log(starting)
+console.log(finish)
 console.log(attended)
