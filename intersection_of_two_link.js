@@ -32,3 +32,36 @@ d.next = e
 e.next = b
 
 console.log(intersection_point(list1, list2))
+
+//Python Solution
+// class ListNode:
+//     def __init__(self, val=0, next=None):
+//         self.val = val
+//         self.next = next
+// def getIntersectionNode(headA, headB):
+//     if not headA or not headB:
+//         return None
+
+//     p,q = headA , headB
+//     while p and q and p != q :
+//         p = p.next
+//         q = q.next
+//         if p == q :
+//             return q.val
+//         if not p :
+//             p = headB
+//         if not q :
+//             q = headA
+//     return p.val
+
+// l1=ListNode(1)
+// l2=ListNode(2)
+// l3=ListNode(3)
+// l1.next=l2
+// l2.next=l3
+
+// l4=ListNode(1)
+// l5=ListNode(4)
+// l6=ListNode(6)
+// l4.next=l2
+// print(getIntersectionNode(l1,l4))
