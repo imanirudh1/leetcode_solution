@@ -11,14 +11,14 @@ for (let j = 0; j < starting.length; j++) {
   ;[finish[j], finish[minIndex]] = [finish[minIndex], finish[j]]
 }
 
-var start = starting[0]
-var end = finish[0]
+var start
+var end
 const attended = []
 for (let i = 0; i < starting.length; i++) {
   if (attended.length === 0) {
     attended.push(i + 1)
-    var start = starting[i]
-    var end = finish[i]
+    start = starting[i]
+    end = finish[i]
   } else {
     start = starting[i]
     if (start > end) {
